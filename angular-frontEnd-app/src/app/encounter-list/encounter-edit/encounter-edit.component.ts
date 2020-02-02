@@ -1,15 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-encounter-edit',
   templateUrl: './encounter-edit.component.html',
   styleUrls: ['./encounter-edit.component.css']
 })
-export class EncounterEditComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class EncounterEditComponent {
 }

@@ -1,15 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-creature-list',
   templateUrl: './creature-list.component.html',
   styleUrls: ['./creature-list.component.css']
 })
-export class CreatureListComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class CreatureListComponent{
 }
