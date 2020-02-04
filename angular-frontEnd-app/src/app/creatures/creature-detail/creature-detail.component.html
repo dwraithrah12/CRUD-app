@@ -1,15 +1,17 @@
 <!--This will hold the image tied to the creature-->
 <div class="row">
     <div class="col-xs-12">
-        <img src="" 
-             alt=""
-             class="img-responsive">
+        <img 
+            [src]="creature.imagePath" 
+             alt="{{ creature.name }}"
+             class="img-responsive"
+             style="max-height:300px">
     </div>
 </div>
 <!--This is the row with the Creature's name-->
 <div class="row">
     <div class="col-xs-12">
-        <h1>Creature's Name</h1>
+        <h1>{{ creature.name }}</h1>
     </div>
 </div>
 <!--Buttons that will allow management of the creature's attributes-->
@@ -32,7 +34,7 @@
 <!--Creature Description-->
 <div class="row">
     <div class="col-xs-12">
-        Description
+        {{ creature.description }}
     </div>
 </div>
 <!--Creature Attributes-->

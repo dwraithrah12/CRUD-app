@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Creature } from '../creatures.model';
 
 @Component({
   selector: 'app-creature-detail',
@@ -6,4 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./creature-detail.component.css']
 })
 export class CreatureDetailComponent{
+  @Input() creature: Creature;
 }
