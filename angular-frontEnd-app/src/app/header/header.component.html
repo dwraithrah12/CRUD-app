@@ -6,7 +6,26 @@
         <div class="navbar-header">
             <a href="#" class="navbar-brand">Encounters</a>
         </div>
-    </div> 
+  
+        <!-- Creates a collapseable section of the Nav bar. Don't know if I'll need it to collapse, but it does group this section nicely-->
+        <div class="collapse navbar-collapse">
+            <!-- the first part of this collapsable section will have a horizontal list of links to navigate between the two sections, creatures and encounter list-->
+            <ul class="nav navbar-nav">
+                <li><a href="#">Creatures</a></li>
+                <li><a href="#">Encounter List</a></li>
+            </ul>
+            <!-- The second part of the collapsable section will have a drop down menu that will eventually allow saving and loading of data-->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button">Options <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Save Data</a></li>
+                        <li><a href="#">Load Data</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 
