@@ -1,1 +1,27 @@
-<p>creature-list works!</p>
+<!-- This will create a button that will eventually allow the addition of a new creature-->
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Creature</button>
+    </div>
+</div>
+<!-- Template for how creatures will be displayed-->
+<div class="row">
+    <div class="col-xs-12">
+        <a href="#" 
+           class="list-group-item clearfix" 
+           *ngFor="let creature of creatures">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{ creature.name }}</h4>
+                <p class="list-group-item-text">{{ creature.creatureType }}</p>
+                <p class="list-group-item-text">{{ creature.description }}</p>
+            </div>
+            <span>
+                <img [src]="creature.imagePath" 
+                     alt="{{ creature.name }}" 
+                     class="img-responsive" 
+                     style="max-height: 50px;">
+            </span>
+        </a>
+    </div>
+</div>
+
