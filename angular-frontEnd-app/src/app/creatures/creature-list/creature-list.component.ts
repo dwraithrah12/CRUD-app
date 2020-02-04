@@ -8,7 +8,7 @@ import{ Creature } from '../creatures.model';
 })
 export class CreatureListComponent{
   creatures:Creature[]=[
-    new Creature('Hot Elf', 'Elf', 'Sexy as hell elf', 'https://cdn.pixabay.com/photo/2017/12/06/08/39/dragon-3001238_960_720.png')
+    new Creature('Hot Elf', 'Elf', 'Sexy as hell elf', 'https://p1.pxfuel.com/preview/492/268/928/woman-magical-mystical-fantasy-female-magic.jpg')
   ]
 
 }
