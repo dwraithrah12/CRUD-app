@@ -7,7 +7,7 @@ import{ Creature } from '../creatures.model';
   styleUrls: ['./creature-list.component.css']
 })
 export class CreatureListComponent{
-  creatures:Creature[]=[
+  creatures: Creature[] = [
     new Creature('Hot Elf', 'Elf', 'Sexy as hell elf', 'https://p1.pxfuel.com/preview/492/268/928/woman-magical-mystical-fantasy-female-magic.jpg')
   ]
 
