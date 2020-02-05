@@ -11,6 +11,10 @@ export class EncounterListComponent{
     new EncounterList('Hot Elf', 5),
     new EncounterList('Elf Pet', 5)
   ];
+
+  onEncounterAdded(encounter: EncounterList){
+      this.encounterCreature.push(encounter);
+  }
   }
 
 

@@ -1,6 +1,8 @@
 <div class="row">
     <div class="col-xs-10">
-        <app-encounter-edit></app-encounter-edit>
+        <app-encounter-edit
+            (encounterAdded)="onEncounterAdded($event)"></app-encounter-edit
+            >
         <hr>
         <ul class="list-group">
             <a class="list-group-item" 
