@@ -1,6 +1,7 @@
-import { Component, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 import { EncounterList } from '../encounter-list.model';
+import { EncounterListService } from '../encounter-list.service';
 
 @Component({
   selector: 'app-encounter-edit',
@@ -10,12 +11,15 @@ import { EncounterList } from '../encounter-list.model';
 export class EncounterEditComponent {
 @ViewChild('nameInput', { static: false}) nameInputReference: ElementRef;
 @ViewChild('amountInput', { static: false }) amountInputReference: ElementRef;
-@Output() encounterAdded = new EventEmitter<EncounterList>();
+
+constructor(private encounterListService: EncounterListService){
+
+}
 
   onAddItem(){
     const encounterName = this.nameInputReference.nativeElement.value;
     const encounterAmount = this.amountInputReference.nativeElement.value;
     const newEncounterList = new EncounterList(encounterName, encounterAmount);
-    this.encounterAdded.emit(newEncounterList);
+    this.encounterListService.addEncounter(newEncounterList);
   }
 }

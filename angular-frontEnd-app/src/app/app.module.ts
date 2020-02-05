@@ -10,6 +10,7 @@ import { CreatureAttributeComponent } from './creatures/creature-list/creature-a
 import { EncounterListComponent } from './encounter-list/encounter-list.component';
 import { EncounterEditComponent } from './encounter-list/encounter-edit/encounter-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { EncounterListService } from './encounter-list/encounter-list.service';
 
 
 
@@ -29,7 +30,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ EncounterListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
