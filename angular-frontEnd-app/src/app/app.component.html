@@ -1,4 +1,10 @@
 
-<app-header></app-header>
-<app-creatures></app-creatures>
-<app-encounter-list></app-encounter-list>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <app-creatures *ngIf="loadedFeature === 'creature'"></app-creatures>
+            <app-encounter-list *ngIf="loadedFeature === 'encounter-list'"></app-encounter-list>
+        </div>
+    </div>
+</div>

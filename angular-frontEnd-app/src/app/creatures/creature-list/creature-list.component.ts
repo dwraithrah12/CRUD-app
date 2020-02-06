@@ -1,14 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import{ Creature } from '../creatures.model';
+import { CreatureService } from '../creature.service';
 
 @Component({
   selector: 'app-creature-list',
   templateUrl: './creature-list.component.html',
   styleUrls: ['./creature-list.component.css']
 })
-export class CreatureListComponent{
-  creatures:Creature[]=[
-    new Creature('Hot Elf', 'Elf', 'Sexy as hell elf', 'https://p1.pxfuel.com/preview/492/268/928/woman-magical-mystical-fantasy-female-magic.jpg')
-  ]
+export class CreatureListComponent implements OnInit{
+  creatures: Creature[];
+  
+  constructor(private creatureService: CreatureService){}
+
+  ngOnInit(){
+    this.creatures = this.creatureService.getCreatures();
+  }
+
 
 }

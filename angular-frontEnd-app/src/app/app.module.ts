@@ -9,6 +9,8 @@ import { CreatureDetailComponent } from './creatures/creature-detail/creature-de
 import { CreatureAttributeComponent } from './creatures/creature-list/creature-attribute/creature-attribute.component';
 import { EncounterListComponent } from './encounter-list/encounter-list.component';
 import { EncounterEditComponent } from './encounter-list/encounter-edit/encounter-edit.component';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { EncounterListService } from './encounter-list/encounter-list.service';
 
 
 
@@ -21,13 +23,14 @@ import { EncounterEditComponent } from './encounter-list/encounter-edit/encounte
     CreatureDetailComponent,
     CreatureAttributeComponent,
     EncounterListComponent,
-    EncounterEditComponent
+    EncounterEditComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ EncounterListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

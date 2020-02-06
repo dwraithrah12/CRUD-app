@@ -3,7 +3,12 @@
         <app-creature-list></app-creature-list>
     </div>
     <div class = "col-md-7">
-        <app-creature-detail></app-creature-detail>
+        <app-creature-detail
+          *ngIf="selectedCreature; else infoText"
+          [creature]="selectedCreature"></app-creature-detail>
+        <ng-template #infoText>
+            <p>Please select a creature!</p>
+        </ng-template>
     </div>
 </div>
 <hr>

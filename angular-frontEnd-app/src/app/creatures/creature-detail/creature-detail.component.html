@@ -1,28 +1,31 @@
 <!--This will hold the image tied to the creature-->
 <div class="row">
     <div class="col-xs-12">
-        <img src="" 
-             alt=""
-             class="img-responsive">
+        <img 
+            [src]="creature.imagePath" 
+             alt="{{ creature.name }}"
+             class="img-responsive"
+             style="max-height:300px">
     </div>
 </div>
 <!--This is the row with the Creature's name-->
 <div class="row">
     <div class="col-xs-12">
-        <h1>Creature's Name</h1>
+        <h1>{{ creature.name }}</h1>
     </div>
 </div>
 <!--Buttons that will allow management of the creature's attributes-->
 <div class="row">
     <div class="col-xs-12">
-        <div class="btn-group">
+        <div class="btn-group"
+            appDropdown>
             <button type="button" 
                     class="btn btn-primary dropdown-toggle">
                     Modify Creature<span class="caret"></span>
             </button> 
             <!--the drop down menu-->
             <ul class="dropdown-menu">
-                <li><a href="#">Add Attribute to Creature</a></li>
+                <li><a (click)="onAddToEncounter()" style="cursor:pointer">Add Creature to Encounter List</a></li>
                 <li><a href="#">Edit Creature</a></li>
                 <li><a href="#">Delete Creature</a></li>
             </ul>
@@ -32,12 +35,18 @@
 <!--Creature Description-->
 <div class="row">
     <div class="col-xs-12">
-        Description
+        {{ creature.description }}
     </div>
 </div>
 <!--Creature Attributes-->
 <div class="row">
     <div class="col-xs-12">
-        Attributes
+        <ul class="list-group">
+            <li 
+                class="list-group-item"
+                *ngFor="let attribute of creature.attributeArray">
+            {{ attribute.name }} : {{attribute.value}}
+            </li>
+        </ul>
     </div>
 </div>
