@@ -17,4 +17,9 @@ export class EncounterListService{
         this.encounterList.push(encounter);
         this.encounterListChanged.emit(this.encounterList.slice());
     }
+
+    addEncounterCreature(encounterCreature: EncounterList){
+        this.encounterList.push(encounterCreature);
+        this.encounterListChanged.emit(this.encounterList.slice());
+    }
 }

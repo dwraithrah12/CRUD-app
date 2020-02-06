@@ -25,7 +25,7 @@
             </button> 
             <!--the drop down menu-->
             <ul class="dropdown-menu">
-                <li><a href="#">Add Attribute to Creature</a></li>
+                <li><a (click)="onAddToEncounter()" style="cursor:pointer">Add Creature to Encounter List</a></li>
                 <li><a href="#">Edit Creature</a></li>
                 <li><a href="#">Delete Creature</a></li>
             </ul>
@@ -41,6 +41,12 @@
 <!--Creature Attributes-->
 <div class="row">
     <div class="col-xs-12">
-        Attributes
+        <ul class="list-group">
+            <li 
+                class="list-group-item"
+                *ngFor="let attribute of creature.attributeArray">
+            {{ attribute.name }} : {{attribute.value}}
+            </li>
+        </ul>
     </div>
 </div>
